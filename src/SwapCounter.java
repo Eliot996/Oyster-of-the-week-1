@@ -5,6 +5,8 @@ import java.util.List;
 public class SwapCounter {
 
     public static int count(List<Integer> list, int k) {
+        if (list.size() % k == 0) return 0;
+
         Collections.swap(list, 0, 2);
         return 1;
     }
@@ -17,6 +19,7 @@ public class SwapCounter {
         list.add(4);
         list.add(5);
 
-
+        int answer = SwapCounter.count(list, 5);
+        System.out.println(answer);
     }
 }
